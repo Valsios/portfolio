@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Valisoa Randriamalala | Backend Developer Java Spring Boot</title>
+  <meta name="description" content="Backend Developer specializing in Java, Spring Boot, .NET, PostgreSQL. Aspiring Full Stack Developer based in Madagascar.">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* ================= BACKGROUND SVG TECH ================= */
+    .tech-background {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .tech-icon {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 1.5;
+      opacity: 0.05;
+      transition: transform 0.1s linear;
+    }
+
+    .tech-icon:nth-child(1) { top: 15%; left: 10%; }
+    .tech-icon:nth-child(2) { top: 40%; left: 75%; }
+    .tech-icon:nth-child(3) { top: 70%; left: 20%; }
+    .tech-icon:nth-child(4) { top: 25%; left: 85%; }
+    .tech-icon:nth-child(5) { top: 85%; left: 60%; }
+
+    /* ================= LAYOUT ================= */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 0;
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ================= HERO ================= */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding-top: 5rem;
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .hero-layout {
+        grid-template-columns: 160px 1fr;
+        align-items: center;
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800;
+    }
+
+    .hero span {
+      color: var(--primary);
+    }
+
+    .hero h2 {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    .hero p {
+      margin-top: 1.5rem;
+      color: var(--muted);
+      max-width: 750px;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #020617;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* ================= SECTIONS ================= */
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    article {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ================= ANIMATIONS ================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1f2933;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- BACKGROUND TECH SVG -->
+<div class="tech-background">
+  <svg class="tech-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/></svg>
+  <svg class="tech-icon" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="10" rx="2"/><path d="M6 18h12"/></svg>
+  <svg class="tech-icon" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/></svg>
+  <svg class="tech-icon" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+  <svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a7.97 7.97 0 0 0 0-6M4.6 9a7.97 7.97 0 0 0 0 6"/></svg>
+</div>
+
+<!-- HERO -->
+<header class="container hero reveal hero-layout">
+  <img src="profil.JPG"
+       alt="Valisoa Randriamalala - Backend Developer Java Spring Boot"
+       class="profile-photo">
+
+  <div>
+    <h1>Valisoa <span>RANDRIAMALALA</span></h1>
+    <h2>Backend Developer — Java | Spring Boot | .NET</h2>
+
+    <p>
+      Backend Developer with strong experience in Java, Spring Boot, and .NET.
+      Passionate about building scalable, secure, and maintainable applications.
+      Aspiring Full Stack Developer with solid foundations in databases and modern web technologies.
+    </p>
+
+    <div class="buttons">
+      <a href="#projects" class="btn primary">Projects</a>
+      <a href="CV_RANDRIAMALALA_Valisoa.pdf" class="btn" download>Download CV</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- SUMMARY -->
+<section class="container reveal">
+  <h3>Professional Summary</h3>
+  <p>
+    Backend Developer with 3 years of academic and practical experience in Java, Spring Boot,
+    PostgreSQL and REST APIs. Solution-oriented, adaptable, and continuously improving full stack skills.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="container reveal">
+  <h3>Technical Skills</h3>
+  <article>
+    <p>
+      <strong>Languages:</strong> Java, C#, PHP, Python, JavaScript, HTML, CSS<br><br>
+      <strong>Frameworks:</strong> Spring Boot, .NET, Symfony, CodeIgniter, Angular, React<br><br>
+      <strong>Databases:</strong> PostgreSQL, MySQL, Oracle, SQL Server<br><br>
+      <strong>Tools:</strong> GitHub, Docker, REST APIs, MVC Architecture<br><br>
+      <strong>Methodology:</strong> Agile, Solution-oriented development
+    </p>
+  </article>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container reveal">
+  <h3>Projects & Experience</h3>
+  <div class="grid">
+    <article>
+      <h4>Custom Java MVC Framework</h4>
+      <p>Spring Boot inspired framework used for an airport ticket management application.</p>
+    </article>
+
+    <article>
+      <h4>CRM System Enhancement (.NET)</h4>
+      <p>Added data import, user cloning and dashboard features.</p>
+      <a href="https://github.com/wp-ahmed/crm" target="_blank">GitHub →</a>
+    </article>
+
+    <article>
+      <h4>Crypto Web & Mobile Application</h4>
+      <p>Backend & frontend contribution using Java, React, PostgreSQL and Symfony.</p>
+    </article>
+
+    <article>
+      <h4>ASECNA Internship (2025)</h4>
+      <p>Supply and purchasing management system using Spring Boot and PostgreSQL.</p>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container reveal">
+  <h3>Contact</h3>
+  <article>
+    <p>Email: <a href="mailto:RandriaVals2303@gmail.com">RandriaVals2303@gmail.com</a></p>
+    <p>Phone: +261 32 71 913 79</p>
+    <p>Location: Madagascar</p>
+  </article>
+</section>
+
+<footer>
+  © 2025 Valisoa Randriamalala — Backend Developer
+</footer>
+
+<!-- JS: Scroll reveal + Parallax -->
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const icons = document.querySelectorAll(".tech-icon");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(r => observer.observe(r));
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    icons.forEach((icon, index) => {
+      const speed = 0.04 + index * 0.02;
+      const rotate = scrollY * 0.01 * (index % 2 === 0 ? 1 : -1);
+      const drift = scrollY * 0.005 * (index % 2 === 0 ? -1 : 1);
+
+      icon.style.transform = `
+        translateY(${scrollY * speed}px)
+        translateX(${drift}px)
+        rotate(${rotate}deg)
+      `;
+    });
+  });
+</script>
+
+</body>
+</html>
